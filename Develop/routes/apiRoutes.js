@@ -7,10 +7,7 @@ const fs = require("fs");
 
 // get request for /api/notes
 router.get("/notes", function (req, res) {
-  notebook
-    .getNotes()
-    .then((notes) => res.json(notes))
-    .catch((err) => res.status(500).json(err));
+  res.json(notebook.getNotes()).catch((err) => res.status(500).json(err));
 });
 
 router.delete("/notes/:id", function (req, res) {
