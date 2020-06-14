@@ -2,22 +2,19 @@
 const path = require("path");
 const router = require("express").Router();
 // get /notes route
-router.get(
-  "/notes",
-  ((req, res) = () => {
-    // sendFile()- directory, filename you want to display
-    res.sendFile(path.join(__dirname, "../public/notes.html"));
-  })
-);
+const sendHtml = (res, filename) => {
+  return res.sendFile(path.join(__dirname, "..", "public", filename));
+};
+router.get("/notes", (req, res) => {
+  // sendFile()- directory, filename you want to display
+  return sendHtml(res, "notes.html");
+});
 
 // get "*" route
-router.get(
-  "*",
-  ((req, res) = () => {
-    // sendFile()- directory, filename you want to display
-    res.sendFile(path.join(__dirname, "../public/index.html"));
-  })
-);
+router.get("*", (req, res) => {
+  // sendFile()- directory, filename you want to display
+  return sendHtml(res, "index.html");
+});
 
 // export the router
 module.exports = router;

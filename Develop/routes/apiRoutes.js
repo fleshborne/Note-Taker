@@ -1,9 +1,20 @@
 // require express
+const router = require("express").Router();
 // require the class file so you can use those functions, Notebook.js
+const notebook = require("../db/Notebook");
+// require fs
+const fs = require("fs");
 
 // get request for /api/notes
-// call the getNotes() from required class
-// res.json(note)
+router.get("/notes", function (req, res) {
+  notebook
+    .getNotes()
+    .then((notes) => res.json(notes))
+    .catch((err) => res.status(500).json(err));
+});
 
-// delete request for /api/notes/:id
-// call deleteNote();
+router.delete("/notes/:id", function (req, res) {
+  // delete request for /api/notes/:id
+  // call deleteNote();
+});
+module.exports = router;
