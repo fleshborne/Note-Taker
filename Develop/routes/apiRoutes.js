@@ -33,14 +33,11 @@ router.post("/notes", (req, res) => {
 });
 router.delete("/notes/:id", (req, res) => {
   //   // delete request for /api/notes/:id
-  fs.readFile(
-    db,
-    ((err, data) = {
-      if(err) {
-        throw err;
-      },
-    })
-  );
+  fs.readFile(db, (err, data) => {
+    if (err) {
+      throw err;
+    }
+  });
   //   let notesArray = [];
   //   let newNote = req.body;
   //   fs.readFile(db, (err, data) => {
