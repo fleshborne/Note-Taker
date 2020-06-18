@@ -33,7 +33,7 @@ MIT
 
 # TESTS
 
-![heroku test](images\2020-06-17_20-50-11.gif)
+![heroku test](https://github.com/fleshborne/Note-Taker/blob/master/images/2020-06-17_20-50-11.gif)
 
 # SOURCES
 
