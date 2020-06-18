@@ -4,7 +4,7 @@ const router = require("express").Router();
 // get /notes route
 router.get("/notes", (req, res) => {
   // sendFile()- directory, filename you want to display
-  res.sendFile(path.join(__dirname, "../public/notes.html"));
+  res.sendFile(path.join(__dirname, "../"));
 });
 
 // get "*" route
