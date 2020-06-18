@@ -15,7 +15,8 @@ Note-Taker
 
 # DESCRIPTION
 
-Note taker app deployed to Heroku
+Note taker app deployed to Heroku, link here :
+https://hidden-peak-94758.herokuapp.com/
 
 # INSTALL
 
